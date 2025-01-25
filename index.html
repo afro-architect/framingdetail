@@ -895,21 +895,25 @@ svg {
 }
     </style>
       <script>
-        document.querySelectorAll('polygon').forEach(polygon => {
+       document.querySelectorAll('polygon').forEach(polygon => {
   polygon.addEventListener('mouseover', () => {
-    const text = polygon.querySelector('.cls-2');
+    const text = polygon.parentElement.querySelector('.cls-2');
     if (text) {
       text.style.fontSize = '24px';
     }
   });
   polygon.addEventListener('mouseout', () => {
-    const text = polygon.querySelector('.cls-2');
+    const text = polygon.parentElement.querySelector('.cls-2');
     if (text) {
-      text.style.fontSize = '16px';
+      text.style.fontSize = '20px';
     }
   });
 });
       </script>
+      <g>
+  <polygon points="..." />
+  <text class="cls-2">Your text here</text>
+</g>
     </section>
   </body>
 
