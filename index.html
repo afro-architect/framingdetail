@@ -894,6 +894,22 @@ svg {
   font-size: 24px;
 }
     </style>
+      <script>
+        document.querySelectorAll('polygon').forEach(polygon => {
+  polygon.addEventListener('mouseover', () => {
+    const text = polygon.querySelector('.cls-2');
+    if (text) {
+      text.style.fontSize = '24px';
+    }
+  });
+  polygon.addEventListener('mouseout', () => {
+    const text = polygon.querySelector('.cls-2');
+    if (text) {
+      text.style.fontSize = '16px';
+    }
+  });
+});
+      </script>
     </section>
   </body>
 
